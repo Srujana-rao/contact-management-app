@@ -7,7 +7,9 @@ function App() {
   const [contacts, setContacts] = useState([]);
 
   const fetchContacts = async () => {
-    const res = await fetch("http://localhost:5000/contacts");
+    const res = await fetch(
+      "https://contact-management-app-f7sw.onrender.com/contacts"
+    );
     const data = await res.json();
     setContacts(data);
   };
