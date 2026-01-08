@@ -41,7 +41,9 @@ app.delete("/contacts/:id", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
+app.get("/", (req, res) => {
+  res.send("Contact Management API is running 🚀");
+});
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server started");
